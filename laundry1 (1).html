@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<link rel = "stylesheet" href = "style.css">
+
 <html>
 <head>
-	<h1> LOGIN </h1>
+	<h1> Registration </h1>
 </head>
+<script>
+	function ValidateReg(){
+		//make inputs variable for easy access
+		let apartment = document.getElementById('Apartment').value;
+		let password = document.getElementById('Password').value;
+		let confirmpass = document.getElementById('Confirm').value;
+
+
+		if((apartment== "") || (password == "") || (confirmpass =="")){
+			window.alert("Please make sure to enter a username/passowrd");
+		};
+		if(password !== confirmpass){
+			window.alert("Passwords do not match");
+		}
+
+		}
+
+</script>
 <body>
 	<form action= "laundry.php" method= "POST">
 	<table>
@@ -11,12 +29,12 @@
 		<tr><td><input type = "text" id = "Apartment" name = "Apartment" ></td></tr>
 
 		<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
-		<tr><td><input type = "text" id = "Password" name = "Password" ></td></tr> 
+		<tr><td><input type = "password" id = "Password" name = "Password" ></td></tr> 
 
 		<tr><td><label for = "Confirm"> CONFIRM PASSWORD:</label><br></td></tr>
-		<tr><td><input type = "text" id = "Confirm" name = "Confirm" ></td></tr> 
+		<tr><td><input type = "password" id = "Confirm" name = "Confirm" ></td></tr> 
+		<tr id="submit"><td colspan="2"><input type="Submit" value="Submit" onclick="ValidateReg()"></td></tr>
 		
-		<tr id="submit"><td colspan="2"><input type="Submit" value="Submit"></td></tr>
 </table>		
 </form>		
 <body>
