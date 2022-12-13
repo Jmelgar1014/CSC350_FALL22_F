@@ -23,13 +23,15 @@ else{
 		}
 	}else
 	{
-		echo "SUCESSFULLY CONNECTED!</br>";
+		//echo "SUCESSFULLY CONNECTED!</br>";
 		$sql="insert into laundrydata (Apartment, Password, Confirm) 
 		values ('$Apartment','$Password','$Confirm')";
 		$result = (mysqli_query($conn,$sql));
 		if($result){
-
-			echo "ROW INSERTED.";
+			echo "<h5>Thank you for signing up to apartment".$apartment."</h5>";
+			echo "<h2>To go to your account home page click on the link below.</h2>";
+			echo "<button id='account' name='account'><a href='account.php'>Account Home</a></button>";
+			//echo "ROW INSERTED.";
 		}
 ?>
 </body>
