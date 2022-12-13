@@ -10,7 +10,7 @@ $Apartment = $_POST["Apartment"];
 $Password  = $_POST["Password"];
 $Confirm   = $_POST["Confirm"];
 
-$conn = mysqli_connect("localhost:3306","root","Toby4567!","laundry");
+$conn = mysqli_connect("localhost","root","root","laundry");
 if(!$conn){
 	echo "NO CONNECTION";
 }
