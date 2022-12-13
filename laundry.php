@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+$_SESSION['Apartment'] = $_POST['Apartment'];
+$_SESSION['Password'] = $_POST['Password'];
+
+//header('Location: account.php');
+
+$apartment = $_SESSION['Apartment'];
+$pass = $_SESSION['Password'];
+
+
+?>
+
 <!DOCTYPE html>
 <link rel = "stylesheet" href = "style.css">
 <html>
@@ -5,6 +19,7 @@
 <h1> SIGN UP SUCCESSFULLY </h1>
 </head>
 <body>
+	
 <?php
 $Apartment = $_POST["Apartment"];
 $Password  = $_POST["Password"];
