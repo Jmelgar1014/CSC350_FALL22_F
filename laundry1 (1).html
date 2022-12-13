@@ -2,7 +2,6 @@
 
 <html>
 <head>
-	<h1> Registration </h1>
 </head>
 <script>
 	function ValidateReg(){
@@ -36,6 +35,22 @@
 		<tr id="submit"><td colspan="2"><input type="Submit" value="Submit" onclick="ValidateReg()"></td></tr>
 		
 </table>		
-</form>		
+</form>	
+
+<br>
+<br>
+<form action= "login.php" method= "POST">
+	<table>
+		<tr><th>Login</th></tr>
+		<tr><td><label for = "Apartment"> APARTMENT:</label><br></td></tr>
+		<tr><td><input type = "text" id = "Apartment" name = "Apartment" ></td></tr>
+
+		<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
+		<tr><td><input type = "password" id = "Password" name = "Password" ></td></tr> 
+
+		<tr id="submit" name="register"><td colspan="2"><input type="Submit" value="Submit"></td></tr>
+		
+	</table>		
+</form>	
 <body>
 </html>
