@@ -2,6 +2,9 @@
 
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 <script>
 	function ValidateReg(){
@@ -9,7 +12,7 @@
 		let apartment = document.getElementById('Apartment').value;
 		let password = document.getElementById('Password').value;
 		let confirmpass = document.getElementById('Confirm').value;
-
+		
 
 		if((apartment== "") || (password == "") || (confirmpass =="")){
 			window.alert("Please make sure to enter a username/passowrd");
@@ -19,38 +22,53 @@
 		}
 
 		}
-
+		
 </script>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
 <body>
-	<form action= "laundry.php" method= "POST">
-	<table>
-		<tr><td><label for = "Apartment"> APARTMENT:</label><br></td></tr>
-		<tr><td><input type = "text" id = "Apartment" name = "Apartment" ></td></tr>
-
-		<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
-		<tr><td><input type = "password" id = "Password" name = "Password" ></td></tr> 
-
-		<tr><td><label for = "Confirm"> CONFIRM PASSWORD:</label><br></td></tr>
-		<tr><td><input type = "password" id = "Confirm" name = "Confirm" ></td></tr> 
-		<tr id="submit"><td colspan="2"><input type="Submit" value="Submit" onclick="ValidateReg()"></td></tr>
-		
-</table>		
-</form>	
-
-<br>
-<br>
-<form action= "login.php" method= "POST">
-	<table>
-		<tr><th>Login</th></tr>
-		<tr><td><label for = "Apartment"> APARTMENT:</label><br></td></tr>
-		<tr><td><input type = "text" id = "Apartment" name = "Apartment" ></td></tr>
-
-		<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
-		<tr><td><input type = "password" id = "Password" name = "Password" ></td></tr> 
-
-		<tr id="submit" name="register"><td colspan="2"><input type="Submit" value="Submit"></td></tr>
-		
-	</table>		
-</form>	
+<div class="h1 d-flex justify-content-center">ABC Laundry</div>
+	<div class="container">
+		<div class="row ">
+			<div class="col">
+					<form class="d-flex justify-content-center "action= "laundry.php" method= "POST">
+						
+						<table >
+							<tr><td></td></tr>
+							<tr><th>Register</th></div></tr>
+							<tr><td><label for = "Apartment"> APARTMENT:</label><br></td></tr>
+							<tr><td><input class ="form-control"type = "text" id = "Apartment" name = "Apartment" ></td></tr>
+				
+							<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
+							<tr><td><input class ="form-control"type = "password" id = "Password" name = "Password" ></td></tr> 
+				
+							<tr><td><label for = "Confirm"> CONFIRM PASSWORD:</label><br></td></tr>
+							<tr><td><input class ="form-control"type = "password" id = "Confirm" name = "Confirm" ></td></tr> 
+							<tr id="submit" name="register"><td colspan="2"><input  class="btn btn-primary btn-large" type="submit" value="Submit" onclick="ValidateReg()"></td></tr>
+												
+						</table>	
+					</form>
+			</div>
+			<div class="col">
+				<form  class="d-flex justify-content-center" action= "login.php" method= "POST">
+	
+					<table>
+						<tr><th>Login</th></tr>
+						<tr><td><label for = "Apartment"> APARTMENT:</label><br></td></tr>
+						<tr><td><input class ="form-control" type = "text" id = "Apartment" name = "Apartment" ></td></tr>
+			
+						<tr><td><label for = "Password"> PASSWORD:</label><br></td></tr>
+						<tr><td><input class ="form-control" type = "password" id = "Password" name = "Password" ></td></tr> 
+			
+						<tr id="submit" name="register"><td colspan="2"><input class="btn btn-primary btn-large" type="Submit" value="Submit"></td></tr>
+												
+					</table>
+				
+				</form>	
+			
+			</div>
+		</div>
+	</div>
 <body>
 </html>
