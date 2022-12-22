@@ -83,11 +83,12 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertDate`(dt datetime)
 BEGIN
    INSERT INTO WeekSchedule(
+       Apartment,
        nameofday,
        timeinterval,
        FullDate,
        Taken)
-   VALUES(
+   VALUES("",
 		Date_Format(dt, "%W"),
         concat(DATE_FORMAT(dt, "%r"), ' - ',DATE_FORMAT(date_add(dt, interval 2 hour), "%r")),
         dt,
