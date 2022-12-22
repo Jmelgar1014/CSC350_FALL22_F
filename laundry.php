@@ -29,7 +29,7 @@ $Apartment = $_POST["Apartment"];
 $Password  = $_POST["Password"];
 $Confirm   = $_POST["Confirm"];
 	
-$conn = mysqli_connect("localhost","root","root","laundry");
+$conn = mysqli_connect("localhost","root","root1234!","laundry");
 if(!$conn){
 	echo "NO CONNECTION";
 }
@@ -46,7 +46,8 @@ else{
 	}else
 	{
 		//echo "SUCESSFULLY CONNECTED!</br>";
-		$sql="insert into laundrydata (Apartment, Password, Confirm) 
+    
+		$sql="insert into laundrydata (Apartment, Password, Confirm)
 		values ('$Apartment','$Password','$Confirm')";
 		$result = (mysqli_query($conn,$sql));
 		if($result){
