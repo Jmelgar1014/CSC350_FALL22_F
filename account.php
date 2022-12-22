@@ -1,11 +1,11 @@
-/*<?php
+<?php
     session_start();
 
     $apartment = $_SESSION['Apartment'];
     $pass = $_SESSION['Password'];
 
 ?>
-
+/*
 <!DOCTYPE html>
 <html lang="en">
 <head>
