@@ -8,9 +8,9 @@ $_SESSION['Password'] = $_POST['Password'];
 
 $Apartment = $_POST["Apartment"];
 $Password  = $_POST["Password"];
-$Confirm   = $_POST["Confirm"];
+// $Confirm   = $_POST["Confirm"];
 
-$conn = mysqli_connect("localhost","root","root","laundry");
+$conn = mysqli_connect("localhost","root","root1234!","laundry");
 if(!$conn){
 	echo "NO CONNECTION";
 }
