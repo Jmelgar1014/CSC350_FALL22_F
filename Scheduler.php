@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli( "localhost","root","root", "laundry") or die("Error " . mysqli_error($conn));;
+$mysqli = new mysqli( "localhost","root","root1234!", "laundry") or die("Error " . mysqli_error($conn));;
 if(!$mysqli){
   echo "Failed to connect to Database";
 }
@@ -68,18 +68,15 @@ $result = mysqli_query($mysqli, $sql);
 		echo "</table>";
 		}
 	}
-echo '<center><form action="verify.php" method="post" onsubmit= "confirmation()";>';
+echo '<center><form action="Insert.php" method="post" onsubmit= "confirmation()";>';
 
 
 echo '<tr><td><label for="Schedule">Choose a Day and a Time Slot:</label>';
 
 echo '
 <select name="NoD" id="NoD">
-
   <option value="Monday">Monday</option>
-
   <option value="Tuesday">Tuesday</option>
-
   <option value="Wednesday">Wednesday</option>
   
   <option value="Thursday">Thursday</option>
@@ -89,7 +86,6 @@ echo '
   <option value="Saturday">Saturday</option>
   
   <option value="Sunday">Sunday</option>
-
 </select>';
 
 echo '<select name="TimeSlot" id="TimeSlot">';
