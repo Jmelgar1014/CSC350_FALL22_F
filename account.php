@@ -8,8 +8,8 @@ $sql = "SELECT * FROM WeekSchedule WHERE Apartment='".$_SESSION['Apartment']."'"
 
 $result = mysqli_query($mysqli, $sql); 	// Send the query to the database
 
-$sql3 = "select * from weekschedule";
-$result3 = mysqli_query($mysqli, $sql3);
+$sql2 = "select * from weekschedule";
+$result2 = mysqli_query($mysqli, $sql2);
 
 {
 	if (mysqli_num_rows($result) > 0) 			// If there are rows present
@@ -23,11 +23,11 @@ $result3 = mysqli_query($mysqli, $sql3);
 		}
 		echo "</table>"; 
 	}
-	else if (mysqli_num_rows($result3) == 0){
+	else if (mysqli_num_rows($result2) == 0){
     $mysqli->query("CALL LoadDate()");
     header('Location: Scheduler.php');
 	}
-	else if(mysqli_num_rows($result3) > 0){
+	else if(mysqli_num_rows($result2) > 0){
 	header('Location: Scheduler.php');
 	}
     else
