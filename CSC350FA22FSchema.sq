@@ -33,20 +33,6 @@ CREATE TABLE `laundrydata` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `userinfo`
---
-
-DROP TABLE IF EXISTS `userinfo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `userinfo` (
-  `Apartment` varchar(4) NOT NULL,
-  `Password` varchar(20) DEFAULT NULL,
-  `Confirm` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`Apartment`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
 -- Table structure for table `weekschedule`
 --
