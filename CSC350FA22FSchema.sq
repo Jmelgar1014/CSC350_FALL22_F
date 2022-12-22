@@ -63,7 +63,7 @@ CREATE TABLE `weekschedule` (
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `gettable`()
 Begin
-Select * From Test_Cal;
+Select * From WeekSchedule;
 End ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -144,7 +144,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `reset`()
 Begin
-truncate Test_cal;
+truncate WeekSchedule;
 Call LoadCal();
 End ;;
 DELIMITER ;
